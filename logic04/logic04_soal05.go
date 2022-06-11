@@ -9,17 +9,17 @@ func Logic04Soal05(n int) {
 	array := array2.NewNumberArray(n, n)
 	// initial angka dari 1
 	angka := 1
-	// for untuk posisi dari 1 s.d
-	for posisi := 1; posisi <= 4; posisi++ {
-		for b := 1; b < n; b++ {
-			if posisi == 1 { // posisi kiri dari bawah ke atas
-				array[n-1-b][0] = int32(angka)
-			} else if posisi == 2 { //posisi atas dari kiri kanan
-				array[0][b] = int32(angka)
-			} else if posisi == 3 { //posisi kanan dari atas ke bawah
-				array[b][n-1] = int32(angka)
-			} else if posisi == 4 { // posisi bawah dari kanan ke kiri
-				array[n-1][n-1-b] = int32(angka)
+	// for untuk sisi dari 1 s.d
+	for sisi := 1; sisi <= 4; sisi++ {
+		for a := 1; a < n; a++ {
+			if sisi == 1 { // sisi kiri dari bawah ke atas
+				array[n-1-a][0] = int32(angka)
+			} else if sisi == 2 { //sisi atas dari kiri kanan
+				array[0][a] = int32(angka)
+			} else if sisi == 3 { //sisi kanan dari atas ke bawah
+				array[a][n-1] = int32(angka)
+			} else if sisi == 4 { // sisi bawah dari kanan ke kiri
+				array[n-1][n-1-a] = int32(angka)
 			}
 			angka++
 		}
