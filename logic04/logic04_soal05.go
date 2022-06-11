@@ -28,3 +28,28 @@ func Logic04Soal05(n int) {
 	// print array
 	array2.PrintNumberArrayZeroEmpty(array)
 }
+
+func Sample05Step01(n int) {
+	kotak := array2.NewNumberArray(n, n)
+
+	angka := 1
+	for a := 1; a < n; a++ {
+		kotak[n-1-a][0] = int32(angka)
+		angka++
+	}
+}
+
+func Sample05Step02(n int) {
+	kotak := array2.NewNumberArray(n, n)
+
+	angka := 1
+	// buat untuk diulang sebanyak 4 sisi
+	for sisi := 1; sisi <= 4; sisi++ {
+		// isi array di ulang sebanyak sisi
+		for a := 1; a < n; a++ {
+			kotak[n-1-a][0] = int32(angka)
+			angka++
+		}
+		// isi array selesai
+	}
+}
